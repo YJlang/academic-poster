@@ -1,0 +1,10 @@
+# Normalize line endings: keep LF in the repo, let Git handle the working copy.
+* text=auto eol=lf
+
+# Shell scripts must stay LF even on Windows checkouts.
+*.sh text eol=lf
+
+# Treat these as binary (no line-ending or diff munging).
+*.png binary
+*.pdf binary
+*.pptx binary

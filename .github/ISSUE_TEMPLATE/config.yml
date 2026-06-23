@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & usage help
+    url: https://github.com/YJlang/academic-poster/discussions
+    about: Not sure how to configure a poster? Ask in Discussions.
+  - name: 📖 Reference docs
+    url: https://github.com/YJlang/academic-poster/tree/main/academic-poster/reference
+    about: Layout engine, pptx techniques, fonts, and troubleshooting guides.

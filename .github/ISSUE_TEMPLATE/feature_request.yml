@@ -1,0 +1,33 @@
+name: ✨ Feature request
+description: A new block type, theme option, or capability.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the poster *outcome* you want, not just the API — it helps to
+        know what the rendered result should look like.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to achieve?
+      description: The poster outcome or workflow you can't get today.
+      placeholder: "I want a two-row figure grid block so I can show 4 samples."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: A new block type? A theme key? A script flag? Sketch the config.
+      render: yaml
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Workarounds you've tried with the current blocks.
+    validations:
+      required: false

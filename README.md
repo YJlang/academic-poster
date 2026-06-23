@@ -102,17 +102,10 @@ academic-poster/            # ← the skill
 
 ## Contributing
 Issues and PRs are welcome — bug reports, new block types, more cross-platform
-font paths, or non-macOS equivalents for the helper scripts.
-
-1. Fork and create a branch off `main`.
-2. Make your change. If it touches layout, run the demo and **look at the PNG**:
-   ```bash
-   cd academic-poster
-   python examples/demo_poster.py examples/config.example.yaml out.pptx
-   python scripts/render_preview.py out.pptx
-   ```
-3. Keep content out of the engine — the dummy config stays placeholder-only.
-4. Open a PR describing what you changed and why.
+font paths, or non-macOS equivalents for the helper scripts. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup, the render-and-look
+verification loop, and the project principles. By participating you agree to the
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Star History
 

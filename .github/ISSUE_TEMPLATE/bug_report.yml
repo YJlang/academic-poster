@@ -1,0 +1,51 @@
+name: 🐞 Bug report
+description: Something rendered wrong — overflow, clipping, wrong fonts, a crash.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report! A minimal config + a screenshot of the rendered
+        PNG makes bugs much faster to fix.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+      placeholder: "The Method section bar overlaps the paragraph above it."
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Minimal config to reproduce
+      description: The smallest config (YAML or dict) that shows the problem.
+      render: yaml
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Rendered PNG
+      description: Drag in the output of `render_preview.py` (the PNG), if visual.
+    validations:
+      required: false
+  - type: input
+    id: target-app
+    attributes:
+      label: Where did you open the PPTX?
+      placeholder: "PowerPoint 365 (macOS) / LibreOffice 7.6 / Keynote"
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, and `python-pptx` / `Pillow` versions.
+      placeholder: |
+        OS: macOS 14.5
+        Python: 3.11
+        python-pptx: 1.0.2, Pillow: 10.4.0, LibreOffice: 7.6
+    validations:
+      required: false
