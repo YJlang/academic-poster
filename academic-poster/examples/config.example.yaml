@@ -1,0 +1,109 @@
+# academic-poster — example config (ALL CONTENT IS DUMMY; replace freely).
+# This is the single source of truth for a poster: text, theme, figures, tables,
+# charts. The engine (scripts/poster.py) only does layout. Keep real content here,
+# never in the engine.
+
+page:
+  size: A1            # A0 | A1 | A2 | A3   (portrait by default)
+  orientation: portrait
+  margin: 22          # mm
+  gutter: 16          # mm between the two columns
+
+theme:
+  font: auto          # font NAME for the pptx; "auto" = pick a common sans + match font_path
+  font_path: auto     # ttf used ONLY for measuring text; keep it matched to `font`
+  body_size: 20       # pt — main body text
+  # Colors are hex (no #). Tweak just these to re-skin the whole poster.
+  primary: "2A8193"
+  primary_dark: "1F5C69"
+  primary_light: "8CC2CC"
+  accent: "D79A55"
+  ink: "222A2E"
+
+header:
+  title: "Your Poster Title Goes Here: A Concise, Specific Subtitle"
+  title_size: 40
+  authors: "First A. Author¹    Second B. Author¹    Advisor C. Name¹*"
+  affiliation: "¹Department of Something, Your University"
+  # logo: figures/lab_logo.png      # optional; transparent PNG recommended
+
+abstract:
+  label: Abstract
+  paragraphs:
+    - "Replace this with a four-to-six sentence summary: the motivation, the
+       approach, the setup, and the single most important quantitative result.
+       All text on this poster is placeholder content for layout review."
+
+# LEFT column — list of blocks, rendered top-to-bottom (flow).
+left:
+  - {type: section, title: Introduction}
+  - type: text
+    paragraphs:
+      - "State the problem and why it matters, then the gap in prior work that
+         motivates this study. Keep it to a short paragraph."
+      - "Finish with an explicit one-sentence statement of the contribution."
+  - {type: section, title: Method}
+  - type: text
+    paragraphs:
+      - "Summarize the pipeline and the design choices that distinguish it.
+         The figure below is a placeholder for your own diagram."
+  - {type: placeholder, label: "Figure 1", number: "Fig. 1.",
+     caption: "System / method diagram — replace with your figure.", height_mm: 150}
+  - type: equation
+    number: "(1)"
+    # parts: list of [text, is_main]. is_main=false renders as subscript.
+    parts:
+      - ["y = w", true]
+      - ["1", false]
+      - ["x", true]
+      - ["1", false]
+      - [" + w", true]
+      - ["2", false]
+      - ["x", true]
+      - ["2", false]
+      - [" + b", true]
+  - type: text
+    paragraphs:
+      - "Describe the scoring/decision rule in prose. Detail the dataset and the
+         training setup (optimizer, learning rate, batch size, epochs)."
+
+# RIGHT column.
+right:
+  - {type: section, title: Results}
+  - type: table
+    number: "Table 1."
+    caption: "Headline comparison — replace with your numbers."
+    height_mm: 46
+    col_widths: [0.46, 0.22, 0.16, 0.16]
+    highlight_row: 3
+    data:
+      - ["Setting", "Score", "A", "B"]
+      - ["Baseline (paper)", "92.2", "200", "144"]
+      - ["Reproduced", "92.1", "–", "–"]
+      - ["Ours", "90.9", "30", "32"]
+  - type: chart
+    number: "Fig. 2."
+    caption: "Per-class accuracy — weak classes highlighted."
+    height_mm: 78
+    value_range: [0, 100]
+    categories: ["C1", "C2", "C3", "C4", "C5", "C6", "C7"]
+    series:
+      - name: "Accuracy (%)"
+        values: [87.8, 62.2, 71.3, 95.9, 86.8, 91.4, 94.4]
+        color: "2A8193"
+        point_colors: ["2A8193", "D79A55", "D79A55", "2A8193", "2A8193", "2A8193", "2A8193"]
+  - type: text
+    paragraphs:
+      - "Interpret the numbers in prose: which categories are strong, which are
+         weak and why, and whether that affects the downstream use."
+  - {type: placeholder, label: "Figure 3", number: "Fig. 3.",
+     caption: "Qualitative demo — replace with your figure.", height_mm: 150}
+  - {type: section, title: Conclusion}
+  - type: text
+    paragraphs:
+      - "Restate the contribution and the headline result in one or two
+         sentences, then point to the most promising direction for future work."
+
+footer:
+  left: "Your Lab / Group"
+  right: "Your Conference 2026"
