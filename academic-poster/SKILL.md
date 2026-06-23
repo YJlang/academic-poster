@@ -1,6 +1,6 @@
 ---
 name: academic-poster
-description: Generates print-ready academic/conference posters (A0/A1/A2) as editable PPTX with python-pptx. Provides a flow layout engine that measures text from font metrics so sections never overlap or overflow, plus native editable charts and tables, gradient/shadow styling, CJK font handling, and a LibreOffice render-and-check loop. Use when the user wants to build a research or conference poster, a large single-slide PPTX, or asks about poster size, columns, sections, figures, tables, charts, equations, fonts, or fixing text that overflows or gets clipped on a poster.
+description: Builds print-ready academic/conference posters (A0/A1/A2) as an editable PPTX whose flow layout engine measures every paragraph from font metrics, so a section bar can never overlap or overflow the text above it — overflow-proof by construction, no fixed coordinates to hand-tune. Also native editable charts and tables, gradient/shadow styling, CJK font handling, and a LibreOffice render-and-check loop. Use when the user wants to build a research or conference poster, a large single-slide PPTX, or asks about poster size, columns, sections, figures, tables, charts, equations, fonts, or fixing text that overflows or gets clipped on a poster.
 license: MIT
 ---
 

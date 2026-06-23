@@ -1,6 +1,6 @@
 # academic-poster
 
-> Print-ready academic posters as **editable PowerPoint** — an Agent Skill with a text-measuring flow layout.
+> The academic poster builder that **measures your text so a section bar never covers your paragraph** — an overflow-proof flow layout, output as editable PowerPoint.
 
 <p align="center">
   <a href="https://github.com/YJlang/academic-poster/stargazers"><img src="https://img.shields.io/github/stars/YJlang/academic-poster?style=flat&logo=github&color=2A8193" alt="GitHub stars"></a>
